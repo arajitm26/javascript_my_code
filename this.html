@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<a href="https://xyz.com" onclick="my_func(event,this)">click me</a><br><br>
+<a href="https://xyz.com" onmouseover="my_func(event,this)">mouse over</a><br><br>
+Type somthing : <input type="text" name="name" onkeyup="key_up(event,this)">
+
+
+<script type="text/javascript">
+	// "use strict";
+
+	function my_func(e,data)
+	{
+      e.preventDefault();
+      console.log(e);
+
+      console.log(e.type);
+
+      console.log(data);
+
+      console.log(data.href);
+      
+
+	}
+	
+    //in this case "this" returns window object
+
+    function test()
+    {
+    	console.log(this)
+    }
+    test()
+
+    //"this" return an object itself
+    //in this case "this" returns obj
+    let obj = {
+    	name : "arajit",
+    	title : "mondal",
+    	email : "smartjeet39@gmail.com",
+        func : function(){
+        	console.log(this);
+        }
+    }
+
+    obj.func();
+
+    function key_up(e,data)
+    {
+      console.log(e);
+
+      console.log(e.type);
+
+      console.log(data);
+
+      console.log(data.value);
+    }
+
+    
+
+</script>
+</body>
+</html>
