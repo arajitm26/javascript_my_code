@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<form runat="server">
+  <input accept="image/*" type='file' id="imgInp" multiple />
+  <img id="blah" src="#" alt="your image" />
+</form>
+<script type="text/javascript">
+	imgInp.onchange = evt => {
+		console.log(imgInp.files)
+		//const [file] = imgInp.files same as const file = imgInp.files[0]
+		
+  const [file] = imgInp.files //javascript destructuring
+ 
+  
+  if (file) {
+    blah.src = URL.createObjectURL(file)
+  }
+}
+
+</script>
+</body>
+</html>
