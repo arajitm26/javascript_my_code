@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+// 	function Car(make, model, year) {
+//   console.log(this)
+//   this.make_one = make;
+//   this.model = model;
+//   this.year = year;
+//   this.name = "arajit"
+
+// }
+
+//same as
+
+let Car = function (make, model, year) {
+  console.log(this)
+  this.make_one = make;
+  this.model = model;
+  this.year = year;
+  this.name = "arajit"
+
+}
+const car1 = new Car('Eagle', 'Talon TSi', 1993);
+
+console.log(car1);
+
+// let user = new Object();
+//     user.name  = "arajit";
+//     user.email = "smartjeet39@gmail.com";
+//     console.log(user)
+ // //same as
+ // let user = {};
+ //    user.name  = "arajit";
+ //    user.email = "smartjeet39@gmail.com";
+ //    console.log(user)   
+</script>
+</body>
+</html>
