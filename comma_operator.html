@@ -7,15 +7,23 @@
 </head>
 <body>
 <script type="text/javascript">
-	"use strict"
+	let x = 1;
 
-	n = 10; // This will cause an error
-	console.log(n)
+	x = (x++, x);
 
-	eval ("x = 2");
-    alert (x);      // This will cause an error
+	console.log(x);
+	// Expected output: 2
 
-    // if you remove '"use strict"' then no error will be shown
+	x = (2, 3);
+
+	console.log(x);
+	// Expected output: 3
+	
+	const a = (1, b = 2);
+	
+	console.log(a)
+	console.log(b)
+
 </script>
 </body>
 </html>

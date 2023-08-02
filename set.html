@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Set JavaScript</title>
+    <script>
+        let data = new Set(["anil","peter","anil"]);
+
+        data.add({"email":"test@test.com"})
+
+        console.log(data.has("peter1"))
+        data.delete('anil');
+
+        console.log(data);
+
+        for(x of data){
+            console.warn(x)
+        }
+
+        data.forEach((val)=>{
+            console.warn(val)
+        })
+
+        console.warn(data.entries())
+
+        //set to array
+        let arr = [...data]
+
+        console.log(arr)
+        
+      
+    </script>
+  </head>
+  <body>
+    <h1>Set DSA with JavaScript</h1>
+  </body>
+</html>

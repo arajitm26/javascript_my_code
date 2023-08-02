@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<ul id="myList" class="list">
+	  <li>Apples</li>
+	  <li>Oranges</li>
+	  <li>Bananas</li>
+	  <li contenteditable>click me to change the text</li>
+	</ul>
+	<button id="btn" onclick="change()">change first node</button>
+	<button id="btn" onclick="remove()">remove first node</button>
+
+
+<script type="text/javascript">
+	let observer = new MutationObserver(callback);
+	let mList = document.getElementById('myList');
+
+	let options = {
+	  childList: true,
+	  attributes: true,
+	  characterData: true,
+	  subtree: true,
+	  attributeOldValue: true,
+	  characterDataOldValue: true
+	};
+
+    
+	function callback(mutations) {
+		console.log(mutations)
+	  // do something here
+	}
+    
+	observer.observe(mList, options);
+
+
+	function change()
+	{
+		mList.children[0].innerText = "arajit";
+	}
+
+	function remove()
+	{
+		mList.children[0].remove();
+	}
+    // tutorial video https://www.youtube.com/watch?v=iSMg9W1CqDU&list=PL8p2I9GklV45z6Cov4omIOsbptPR1kxpg&index=18&pp=iAQB
+</script>
+</body>
+</html>
