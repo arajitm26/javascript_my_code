@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	//object
+	
+	let age = 30;
+    let zip_code = "pin";
+
+	let my_obj = {
+
+		 fname : "arajit",
+		 lname : "mondal",
+		 fullname : function() {
+		 	return "my name is "+this.fname+" "+this.lname;
+		 },
+		 age,
+         [zip_code]:712503
+	}
+
+	console.log(my_obj)
+	console.log(my_obj.fullname())
+
+
+	//json
+	
+    let my_json = {
+
+		 "fname" : "arajit",
+		 "lname" : "mondal",
+		 "fullname" : "arajit mondal",
+		 "age":30,
+         "pin":712503
+	}
+
+	console.log(my_json)
+
+</script>
+</body>
+</html>
