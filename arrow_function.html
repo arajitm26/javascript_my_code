@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+
+    
+
+    let please = (name,email) => { console.log("name is "+name+" and email is "+email) }
+    please("arajit mondal","smartjeet39@gmail.com")
+
+    let myself = name => console.log(name)
+
+    myself("arajit")
+
+    let ok = () => console.log("i am ok")
+    ok()
+
+
+    let me = (a) => (b,c) => { return a+b+c }
+
+	
+
+	//same as
+	// let me = function (a) {
+	// 	let you = function(b,c)
+	// 	{
+	// 		return a+b+c
+	// 	}
+
+	// 	return you
+	// }
+    
+    let x = me(5)
+	console.log(x(6,7))
+
+
+	// const func = () => { foo: 1 };
+    // Calling func() returns undefined!
+    const func = () => ({ foo: 1 });
+
+    console.log(func())
+
+
+    let yes = (a) => { 
+    	
+    	a = a*2; 
+
+    	return (b,c) => { 
+    		return a+b+c 
+    	} 
+    	//same as
+    	// return (b,c) => a+b+c 
+    }
+
+    let y = yes(5)
+	console.log(y(6,7))
+</script>
+</body>
+</html>
