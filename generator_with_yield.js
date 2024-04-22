@@ -8,6 +8,11 @@
 <body>
 
 <script type="text/javascript">
+
+  
+  //https://www.youtube.com/watch?v=RN5FRD-yrz4
+
+
   function* foo(index) {
     while (index < 2) {
       yield index;
